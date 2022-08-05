@@ -47,7 +47,7 @@ kind: Deployment
 metadata:
   name: kubenews
 spec:
-  replicas: 3
+  replicas: 20
   selector:
     matchLabels:
       app: kubenews
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: erthalmvp/kube-news:v2
+        image: erthalmvp/kube-news:v1
         env:
           - name: DB_DATABASE
             value: "kubenews"
